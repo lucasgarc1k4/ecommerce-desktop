@@ -4,7 +4,6 @@
  */
 package br.edu.tds.ecommerce;
 
-
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -39,7 +38,7 @@ public class TelaGerenciamentoUsuariosController implements Initializable {
     private TableColumn<Usuario, String> colNomeCompleto;
 
     @FXML
-    private TableColumn<Usuario, String> colNomeUsuario;
+    private TableColumn<Usuario, String> colUsuario;
 
     @FXML
     private TableColumn<Usuario, String> colEmail;
@@ -54,17 +53,17 @@ public class TelaGerenciamentoUsuariosController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
 
-        colNomeCompleto.setCellValueFactory(new PropertyValueFactory<>("NomeCompleto"));
-        colNomeUsuario.setCellValueFactory(new PropertyValueFactory<>("NomeUsuario"));
-        colEmail.setCellValueFactory(new PropertyValueFactory<>("Email"));
-        colCPF.setCellValueFactory(new PropertyValueFactory<>("Cpf"));
+        colNomeCompleto.setCellValueFactory(new PropertyValueFactory<>("nomeCompleto"));
+        colUsuario.setCellValueFactory(new PropertyValueFactory<>("nomeUsuario"));
+        colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+        colCPF.setCellValueFactory(new PropertyValueFactory<>("cpf"));
 
         carregarUsuarios();
     }
 
     @FXML
     private void abrirTelaCadastroUsuario() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/TelaCadastroUsuario.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaCadastroUsuario.fxml"));
 
         Parent root = loader.load();
 
@@ -91,6 +90,7 @@ public class TelaGerenciamentoUsuariosController implements Initializable {
                 u.setEmail(rs.getString("email"));
                 u.setCpf(rs.getString("cpf"));
                 u.setSenha(rs.getString("senha"));
+                u.setRole(rs.getString("role"));
 
                 listaUsuarios.add(u);
             }
@@ -136,7 +136,7 @@ public class TelaGerenciamentoUsuariosController implements Initializable {
 
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/TelaCadastroUsuario.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaCadastroUsuario.fxml"));
 
             Parent root = loader.load();
 
