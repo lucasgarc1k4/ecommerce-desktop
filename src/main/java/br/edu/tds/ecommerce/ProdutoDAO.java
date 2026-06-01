@@ -15,7 +15,7 @@ public class ProdutoDAO {
     
     public void cadastrarProduto(Produto p) throws Exception{
     
-     String sql = "INSERT INTO produtos nome, descricao, categoria, preco,quantidade, imagem, ativo)VALUES (?, ?, ?, ?, ?, ?, ?)";
+     String sql = "INSERT INTO produtos (nome, descricao, categoria, preco,quantidade, imagem, ativo)VALUES (?, ?, ?, ?, ?, ?, ?)";
      
      
        try (Connection conn = Conexao.conectar();
