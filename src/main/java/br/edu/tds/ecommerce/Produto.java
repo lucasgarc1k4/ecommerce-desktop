@@ -6,80 +6,93 @@ package br.edu.tds.ecommerce;
 
 /**
  *
- * @author aluno
+ * @author douglas
  */
 public class Produto {
-     private int id;
-   private String nome;
-   private String descricao;
-   private String categoria;
-   private double preco;
-   private int quantidade;
-   private String imagem;
-   private boolean ativo;
-   public Produto() {
-   }
-   public int getId() {
-       return id;
-   }
-   public void setId(int id) {
-       this.id = id;
-   }
-   public String getNome() {
-       return nome;
-   }
 
-   public void setNome(String nome) {
-       this.nome = nome;
-   }
+    private int id;
+    private String nome;
+    private String descricao;
+    private String categoria;
+    private double preco;
+    private int quantidade;
+    private String imagem;
+    private boolean ativo;
 
-   public String getDescricao() {
-       return descricao;
-   }
+    public Produto() {
+    }
 
-   public void setDescricao(String descricao) {
-       this.descricao = descricao;
-   }
+    public Produto(String nome, String descricao, String categoria, double preco, int quantidade, String imagem, boolean ativo) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.categoria = categoria;
+        this.preco = preco;
+        this.quantidade = quantidade;
+        this.imagem = imagem;
+        this.ativo = ativo;
+    }
 
-   public String getCategoria() {
-       return categoria;
-   }
+    public int getId() {
+        return id;
+    }
 
-   public void setCategoria(String categoria) {
-       this.categoria = categoria;
-   }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-   public double getPreco() {
-       return preco;
-   }
+    public String getNome() {
+        return nome;
+    }
 
-   public void setPreco(double preco) {
-       this.preco = preco;
-   }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-   public int getQuantidade() {
-       return quantidade;
-   }
+    public String getDescricao() {
+        return descricao;
+    }
 
-   public void setQuantidade(int quantidade) {
-       this.quantidade = quantidade;
-   }
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 
-   public String getImagem() {
-       return imagem;
-   }
+    public String getCategoria() {
+        return categoria;
+    }
 
-   public void setImagem(String imagem) {
-       this.imagem = imagem;
-   }
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
 
-   public boolean isAtivo() {
-       return ativo;
-   }
+    public double getPreco() {
+        return preco;
+    }
 
-   public void setAtivo(boolean ativo) {
-       this.ativo = ativo;
-   }
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
+
+    public boolean isAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
+    }
 }
-
-

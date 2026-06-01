@@ -1,8 +1,8 @@
 CREATE DATABASE  IF NOT EXISTS `tela_login` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `tela_login`;
--- MySQL dump 10.13  Distrib 8.0.45, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.36, for Linux (x86_64)
 --
--- Host: 127.0.0.1    Database: tela_login
+-- Host: localhost    Database: tela_login
 -- ------------------------------------------------------
 -- Server version	8.0.45-0ubuntu0.24.04.1
 
@@ -27,13 +27,13 @@ DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nomeCompleto` varchar(100) DEFAULT NULL,
-  `nomeUsuario` varchar(100) DEFAULT NULL,
+  `nomeUsuario` varchar(50) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `senha` varchar(100) DEFAULT NULL,
-  `cpf` varchar(100) DEFAULT NULL,
+  `cpf` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (9,'lucas','lucas','lucas@gmail.com','12345','156321356133'),(10,'daniel sousa','daniel','daniel@gmail.com','12345','1432321362');
+INSERT INTO `usuarios` VALUES (6,'Marcelo','mneves','marcelo@email.com','marcelo','456879321'),(11,'Roberto','roberto','roberto@email.com','roberto','11111111111'),(14,'Duda Duda','duda','duda@email.com','duda','88888888');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-05-14 13:15:24
+-- Dump completed on 2026-05-14 16:15:14
